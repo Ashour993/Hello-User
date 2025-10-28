@@ -8,7 +8,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 100%;
     text-align: center;
 }
 img {
@@ -39,12 +39,16 @@ header {
     gap: 25px;
     margin-bottom: 50px;
     z-index: 1;
+    position: absolute;
+    top: 20px;
+    display: flex;
+    right: 20px;
 }
 
 h1 {
     padding: 50px;
     font-size: 3em;
-    margin: 0;
+    margin-top: 175px;
     text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
     z-index: 1;
 }
@@ -80,4 +84,41 @@ button {
 
 button:active {
     transform: scale(0.97);
+}
+
+
+form {
+    background-color: #faf6f6;
+    padding: 30px;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+input {
+    padding: 8px;
+    width: 200px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+#addMemberForm {
+   color: black;
+
 }

@@ -4,10 +4,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class Valkommen_sida{
-    
-@GetMapping("/")
-public String valkommen() {
-    return "index";
-}
+public class VaraMedlemmar {
+
+    @GetMapping("/VaraMedlemmar")
+    public String view() {
+        return "VaraMedlemmar";
+    }
 }
