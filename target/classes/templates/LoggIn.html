@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="/AddMedlemmar"> <button id="AddMembersBtn" type="button" >Lägg till medlemmar</button></a>
+    <a href="/VaraMedlemmar"><button id="membersBtn" type="button">Våra Medlemmar</button></a>
+     <button class="btn" onclick="location.href='/'">Home</button>
+    </header> 
+    <img src="admin.jpg">
+    <form class="admin">
+
+        <label for="username">Användarnamn:</label>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="password">Lösenord:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <button type="submit">Logga in</button>
+    </form>
+    
+</body>
+</html>
