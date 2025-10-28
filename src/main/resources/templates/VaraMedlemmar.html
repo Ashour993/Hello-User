@@ -28,7 +28,16 @@
                         <th>E-post</th>
                     </tr>
                 </thead>
-                
+                <tbody th:each="medlem : ${medlemmar}">
+                    <tr>
+                        <td th:text="${medlem.firstname}">Förnamn</td>
+                        <td th:text="${medlem.lastname}">Efternamn</td>
+                        <td th:text="${medlem.birthdate}">Födelsedag</td>
+                        <td th:text="${medlem.email}">E-post</td>
+                        <td><a type="button" id="delete" th:href="@{/remove-medlem/{id}(id=${medlem.id})}">X</a></td>
+                    </tr>
+                </tbody>
+                    
             </table>
 </div>
 
