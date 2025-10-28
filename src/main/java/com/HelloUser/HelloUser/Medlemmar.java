@@ -2,39 +2,66 @@ package com.HelloUser.HelloUser;
 
 public class Medlemmar {
 
-    private String Förnamn;
-    private String Efternamn;
-    private int Födelsedag;
+    private String Firstname;
+    private String Lastname;
+    private String Birthdate;  
+    private String Email;
     private int id;
-    public Medlemmar(String förnamn, String efternamn, int födelsedag, int id) {
-        this.Förnamn = förnamn;
-        this.Efternamn = efternamn;
-        this.Födelsedag = födelsedag;
+
+    
+    public Medlemmar() {
+    }
+
+    
+    public Medlemmar(String firstname, String lastname, String birthdate, String email, int id) {
+        this.Firstname = firstname;
+        this.Lastname = lastname;
+        this.Birthdate = birthdate;
+        this.Email = email;
         this.id = id;
     }
-    public String getFörnamn() {
-        return Förnamn;
+
+    public String getFirstname() {
+        return Firstname;
     }
-    public void setFörnamn(String förnamn) {
-        Förnamn = förnamn;
+
+    public void setFirstname(String firstname) {
+        Firstname = firstname;
     }
-    public String getEfternamn() {
-        return Efternamn;
+
+    public String getLastname() {
+        return Lastname;
     }
-    public void setEfternamn(String efternamn) {
-        Efternamn = efternamn;
+
+    public void setLastname(String lastname) {
+        Lastname = lastname;
     }
-    public int getFödelsedag() {
-        return Födelsedag;
+
+    public String getBirthdate() {
+        return Birthdate;
     }
-    public void setFödelsedag(int födelsedag) {
-        Födelsedag = födelsedag;
+
+    public void setBirthdate(String birthdate) {
+        Birthdate = birthdate;
     }
+
+    public String getEmail() {
+        return Email;
+    }
+
+    public void setEmail(String email) {
+        Email = email;
+    }
+
     public int getId() {
         return id;
     }
+
     public void setId(int id) {
         this.id = id;
     }
+
     
 }
+
+    
