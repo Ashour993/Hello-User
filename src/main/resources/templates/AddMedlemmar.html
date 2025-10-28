@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <button id="homeBtn" onclick="location.href='/'">Home</button>
+    <button id="ourMembersBtn" onclick="location.href='/VaraMedlemmar'">Våra Medlemmar</button>
+</header>
+    <img src="natur1.jpg" >
+     <h1>Lägg till medlem</h1>
+      
+    <form id="addMemberForm" >
+        <label for="fname">Förnamn:</label>
+        <input type="text" id="fname" name="fname" required><br><br>
+
+        <label for="lname">Efternamn:</label>
+        <input type="text" id="lname" name="lname" required><br><br>
+
+        <label for="bday">Födelsedag:</label>
+        <input type="date" id="bday" name="bday" required><br><br>
+
+        <label for="email">E-post:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <button type="submit">Spara medlem</button>
+    </form>
+
+    <script src="addMember.js"></script>
+    
+</body>
+</html>
