@@ -10,8 +10,9 @@
     <img src="welcome.jpg" >
     <header>
     <button class="btn" onclick="location.href='/'">Home</button>
-    <button class="btn" onclick="location.href='/AddMedlemmar'">Lägg till medlem</button>
-     <a href="/LoggIn"><button id="adminBtn" type="button">Logga in som admin</button></a>
+     <a th:if="${session.username == 'admin'}" th:href="@{/AddMedlemmar}"> <button id="AddMembersBtn" type="button" >Lägg till medlemmar</button></a>
+     <a th:unless="${session.username == 'admin'}" th:href="@{/LoggIn}"><button id="adminBtn" type="button">Logga in som admin</button></a>
+     <a th:if="${session.username == 'admin'}" th:href="@{/LoggUt}"><button id="adminBtn" type="button">Logga Ut</button></a>
 </header>
 
 <div class="members-container">
@@ -34,7 +35,7 @@
                         <td th:text="${medlem.lastname}">Efternamn</td>
                         <td th:text="${medlem.birthdate}">Födelsedag</td>
                         <td th:text="${medlem.email}">E-post</td>
-                        <td><a type="button" id="delete" th:href="@{/remove-medlem/{id}(id=${medlem.id})}">X</a></td>
+                        <td><a type="button" id="delete" th:if="${session.username == 'admin'}" th:href="@{/remove-medlem/{id}(id=${medlem.id})}">X</a></td>
                     </tr>
                 </tbody>
                     

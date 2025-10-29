@@ -8,13 +8,13 @@
 </head>
 <body>
     <header>
-        <a href="/AddMedlemmar"> <button id="AddMembersBtn" type="button" >Lägg till medlemmar</button></a>
+         <a th:if="${session.username == 'admin'}" th:href="@{/AddMedlemmar}"> <button id="AddMembersBtn" type="button" >Lägg till medlemmar</button></a>
     <a href="/VaraMedlemmar"><button id="membersBtn" type="button">Våra Medlemmar</button></a>
      <button class="btn" onclick="location.href='/'">Home</button>
     </header> 
     <img src="admin.jpg">
-    <form class="admin">
-
+    
+    <form class="admin" method="post" th:action="@{/LoggIn}">
         <label for="username">Användarnamn:</label>
         <input type="text" id="username" name="username" required><br><br>
 
