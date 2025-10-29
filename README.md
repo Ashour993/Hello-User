@@ -7,7 +7,7 @@ Member data includes:
 <First name>
 <Last name>
 <Birthday>
-<Email>.
+<Email>
 The system uses session based authentication to protect admin pages.
 
 ### Admin inlogg
