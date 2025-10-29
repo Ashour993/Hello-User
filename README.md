@@ -7,9 +7,12 @@ Member data includes:
 <First name>
 <Last name>
 <Birthday>
-<Email>.
+<Email>
 The system uses session based authentication to protect admin pages.
 
+### Admin inlogg
+- Username: admin
+- Password: admin
 ### Project includes
 - Java Spring Boot backend.
 - HTML rendered with Thymeleaf.
@@ -18,7 +21,7 @@ The system uses session based authentication to protect admin pages.
 - Validation for user input.
 
 #### Main features in this project
-1. Admin login with username and password.
+1. Admin login with username and password (admin/admin).
 2. Display all registered members.
 3. Add new members using a form.
 4. Basic input validation.
