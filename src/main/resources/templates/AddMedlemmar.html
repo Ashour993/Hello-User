@@ -8,8 +8,10 @@
 </head>
 <body>
     <header>
+         
         <button id="homeBtn" onclick="location.href='/'">Home</button>
-    <button id="ourMembersBtn" onclick="location.href='/VaraMedlemmar'">Våra Medlemmar</button>
+        <button id="ourMembersBtn" onclick="location.href='/VaraMedlemmar'">Våra Medlemmar</button>
+        <a th:if="${session.username == 'admin'}" th:href="@{/LoggUt}"><button id="adminBtn" type="button">Logga Ut</button></a>
 </header>
     <img src="natur1.jpg" >
      <h1>Lägg till medlem</h1>

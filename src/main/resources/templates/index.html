@@ -12,9 +12,10 @@
     <h1>Välkommen till vår förening</h1>
     <header>
         
-    <a href="/AddMedlemmar"> <button id="AddMembersBtn" type="button" >Lägg till medlemmar</button></a>
+    <a th:if="${session.username == 'admin'}" th:href="@{/AddMedlemmar}"> <button id="AddMembersBtn" type="button" >Lägg till medlemmar</button></a>
     <a href="/VaraMedlemmar"><button id="membersBtn" type="button">Våra Medlemmar</button></a>
-    <a href="/LoggIn"><button id="adminBtn" type="button">Logga in som admin</button></a>
+    <a th:unless="${session.username == 'admin'}" th:href="@{/LoggIn}"><button id="adminBtn" type="button">Logga in som admin</button></a>
+     <a th:if="${session.username == 'admin'}" th:href="@{/LoggUt}"><button id="adminBtn" type="button">Logga Ut</button></a>
         
     </header>
     
